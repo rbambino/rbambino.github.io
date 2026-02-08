@@ -289,12 +289,12 @@
         .contact-right {
             flex: 1;
         }
-        
-        /* Tighter text spacing for clean top alignment */
+
+        /* Remove default paragraph top spacing in Contact so tops align perfectly */
         #contact .contact-item-text p {
-            margin-bottom: 0.3rem;
+            margin: 0;
         }
-        
+
         /* Icons under email, left-aligned */
         .contact-icons {
             justify-content: flex-start;
@@ -315,10 +315,6 @@
         .contact-item-text {
             font-size: 1.1rem;
             color: var(--text-primary);
-        }
-        
-        .contact-item-text p {
-            margin-bottom: 0.3rem;
         }
         
         .contact-item a {
