@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Professor</title>
+    <title>Your Name - PhD Candidate</title>
     <style>
         * {
             margin: 0;
@@ -11,9 +11,21 @@
             box-sizing: border-box;
         }
         
+        :root {
+            /* Dark mode color palette */
+            --bg-primary: #3a3f4b;
+            --bg-secondary: #2a2e38;
+            --text-primary: #ece8e1;
+            --text-secondary: #a8a095;
+            --link-color: #7da3cc;
+            --link-hover: #9fc3e8;
+        }
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
         }
         
         /* Navigation */
@@ -21,41 +33,69 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: var(--bg-secondary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             z-index: 1000;
+            padding: 1rem 2rem;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        
+        .university-logo {
+            height: 40px;
+            width: auto;
+        }
+        
+        .site-title {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 1.3rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .site-title:hover {
+            color: var(--link-hover);
         }
         
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: flex-end;
-            padding: 1rem 2rem;
-        }
-        
-        nav ul li {
-            margin-left: 2rem;
+            gap: 2rem;
         }
         
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: var(--text-primary);
             font-weight: 500;
+            font-size: 1rem;
             transition: color 0.3s;
         }
         
         nav ul li a:hover {
-            color: #007bff;
+            color: var(--link-hover);
         }
         
         /* Sections */
         section {
-            padding: 80px 2rem;
+            padding: 100px 2rem;
             min-height: 100vh;
         }
         
         section:nth-child(even) {
-            background: #f8f9fa;
+            background: var(--bg-secondary);
         }
         
         .container {
@@ -63,16 +103,165 @@
             margin: 0 auto;
         }
         
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
+        /* Home Section */
+        .home-content {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
         }
         
+        .profile-section {
+            flex-shrink: 0;
+            text-align: center;
+        }
+        
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--link-color);
+        }
+        
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-title {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.1);
+        }
+        
+        .social-icons img {
+            width: 32px;
+            height: 32px;
+        }
+        
+        .intro-text {
+            flex: 1;
+        }
+        
+        .intro-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        /* Section Headers */
         h2 {
             font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--text-primary);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
             margin-bottom: 1rem;
-            color: #2c3e50;
+            color: var(--text-primary);
+        }
+        
+        /* Research & Teaching Sections */
+        .paper-item {
+            margin-bottom: 2rem;
+        }
+        
+        .paper-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .paper-authors {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .paper-abstract {
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .paper-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            margin-right: 1rem;
+            transition: color 0.3s;
+        }
+        
+        .paper-links a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+        
+        /* Contact Section */
+        .contact-content {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+        
+        .contact-title {
+            font-size: 2rem;
+            color: var(--text-primary);
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-item img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .contact-item a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+        
+        /* Links */
+        a {
+            color: var(--link-color);
+        }
+        
+        a:hover {
+            color: var(--link-hover);
         }
         
         /* Smooth scrolling */
@@ -84,30 +273,46 @@
 <body>
     <!-- Navigation Menu -->
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#teaching">Teaching</a></li>
-            <li><a href="publications.html">Publications</a></li> <!-- Separate page -->
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="nav-left">
+                <img src="images/university-logo.png" alt="University Logo" class="university-logo">
+                <a href="#home" class="site-title">Your Name</a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="cv.pdf" target="_blank">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Home Section -->
     <section id="home">
         <div class="container">
-            <h1>Dr. Your Name</h1>
-            <p>Professor of [Your Field]</p>
-            <p>Welcome to my academic website.</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Your bio and background information here...</p>
+            <div class="home-content">
+                <div class="profile-section">
+                    <img src="images/profile-picture.jpg" alt="Your Name" class="profile-picture">
+                    <div class="profile-name">Your Name</div>
+                    <div class="profile-title">PhD Candidate in Economics</div>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/yourusername" target="_blank">
+                            <img src="images/x-icon.png" alt="X (Twitter)">
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank">
+                            <img src="images/linkedin-icon.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://university.edu/yourprofile" target="_blank">
+                            <img src="images/university-icon.png" alt="University">
+                        </a>
+                    </div>
+                </div>
+                <div class="intro-text">
+                    <p>Add your introduction text here. This is where you can describe your research interests, background, and what you're currently working on.</p>
+                    <p>You can add multiple paragraphs to tell your story and highlight your academic journey.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -115,7 +320,48 @@
     <section id="research">
         <div class="container">
             <h2>Research</h2>
-            <p>Information about your research interests and projects...</p>
+            
+            <h3>Working Papers</h3>
+            
+            <div class="paper-item">
+                <div class="paper-title">Paper Title 1</div>
+                <div class="paper-authors">with Co-Author 1 and Co-Author 2</div>
+                <div class="paper-abstract">
+                    Abstract goes here. You can add a brief description of the paper...
+                </div>
+                <div class="paper-links">
+                    <a href="#">PDF</a>
+                    <a href="#">SSRN</a>
+                </div>
+            </div>
+            
+            <div class="paper-item">
+                <div class="paper-title">Paper Title 2</div>
+                <div class="paper-authors">with Co-Author 3</div>
+                <div class="paper-abstract">
+                    Abstract goes here...
+                </div>
+                <div class="paper-links">
+                    <a href="#">PDF</a>
+                </div>
+            </div>
+            
+            <h3>Work in Progress</h3>
+            
+            <div class="paper-item">
+                <div class="paper-title">Work in Progress Title 1</div>
+                <div class="paper-authors">with Co-Author 4</div>
+                <div class="paper-abstract">
+                    Description of work in progress...
+                </div>
+            </div>
+            
+            <div class="paper-item">
+                <div class="paper-title">Work in Progress Title 2</div>
+                <div class="paper-abstract">
+                    Description of work in progress...
+                </div>
+            </div>
         </div>
     </section>
 
@@ -123,17 +369,44 @@
     <section id="teaching">
         <div class="container">
             <h2>Teaching</h2>
-            <p>Courses you teach and teaching philosophy...</p>
+            
+            <h3>Current Courses</h3>
+            
+            <div class="paper-item">
+                <div class="paper-title">Course Name 1</div>
+                <div class="paper-authors">Fall 2024</div>
+                <div class="paper-abstract">
+                    Course description goes here...
+                </div>
+                <div class="paper-links">
+                    <a href="#">Syllabus</a>
+                </div>
+            </div>
+            
+            <h3>Past Courses</h3>
+            
+            <div class="paper-item">
+                <div class="paper-title">Course Name 2</div>
+                <div class="paper-authors">Spring 2024</div>
+                <div class="paper-abstract">
+                    Course description goes here...
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Email: your.email@university.edu</p>
-            <p>Office: Building Name, Room 123</p>
-        </div>
-    </section>
-</body>
-</html>
+            <div class="contact-content">
+                <h2 class="contact-title">Contact</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="images/email-icon.png" alt="Email">
+                        <a href="/cdn-cgi/l/email-protection#5821372d2a763d35393134182d36312e3d2a2b312c21763d3c2d"><span class="__cf_email__" data-cfemail="4930263c3b672c24282025093c27203f2c3b3a203d30672c2d3c">[email&#160;protected]</span></a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="images/location-icon.png" alt="Location">
+                        <span>Department of Economics<br>
+                        University Name<br>
+                        Building Name, Room 123<br>
