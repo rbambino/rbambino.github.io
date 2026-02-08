@@ -182,6 +182,10 @@
             margin-bottom: 1rem;
             color: var(--text-primary);
         }
+
+        .section-main-content > h3:first-of-type {
+            margin-top: 0;
+        }
         
         /* Research & Teaching Layout */
         .section-content-wrapper {
@@ -241,32 +245,28 @@
             text-decoration: underline;
         }
         
-        /* Contact Section */
-        .contact-content {
+        /* Contact layout */
+        .contact-info {
             display: flex;
             gap: 4rem;
             align-items: flex-start;
         }
         
-        .contact-title {
-            font-size: 2rem;
-            color: var(--text-primary);
-            flex-shrink: 0;
-        }
-        
-        .contact-info {
-            flex: 1;
-            display: flex;
-            gap: 4rem;
-            justify-content: space-between;
-        }
-        
-        .contact-left {
-            flex: 1;
-        }
-        
+        .contact-left,
         .contact-right {
             flex: 1;
+        }
+        
+        /* Tighter text spacing for clean top alignment */
+        #contact .contact-item-text p {
+            margin-bottom: 0.3rem;
+        }
+        
+        /* Icons under email, left-aligned */
+        .contact-icons {
+            justify-content: flex-start;
+            margin-top: 0.6rem;
+            gap: 1rem;
         }
         
         .contact-item {
@@ -448,20 +448,21 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="contact-title">Contact</h2>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="section-content-wrapper">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="section-main-content">
                 <div class="contact-info">
                     <div class="contact-left">
-                        <div class="contact-item">
-                            <div class="contact-item-text">
-                                <p>Raffael Kind</p>
-                                <p><a href="mailto:raffael.kind@eui.eu">raffael.kind@eui.eu</a></p>
-                            </div>
+                        <div class="contact-item-text">
+                            <p>Raffael Kind</p>
+                            <p><a href="mailto:raffael.kind@eui.eu">raffael.kind@eui.eu</a></p>
                         </div>
-                        <div class="social-icons">
+
+                        <div class="social-icons contact-icons">
                             <a href="https://x.com/RaffaelKind" target="_blank">
                                 <img src="images/X_icon.png" alt="X (Twitter)">
                             </a>
@@ -473,18 +474,20 @@
                             </a>
                         </div>
                     </div>
+
                     <div class="contact-right">
                         <div class="contact-item-text">
                             <p>Department of Economics</p>
                             <p>European University Institute</p>
-                            <p>Via delle Fontanelle 18</p> 
-                            <p>50014 Fiesole</p> 
+                            <p>Via delle Fontanelle 18</p>
+                            <p>50014 Fiesole</p>
                             <p>Italy</p>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
-    </section>
-</body>
-</html>
+    </div>
+</section>
+
