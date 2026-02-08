@@ -22,6 +22,9 @@
             --text-secondary: #a8a095;
             --link-color: #7da3cc;
             --link-hover: #9fc3e8;
+            --page-pad: 2rem;               /* shared left/right padding everywhere */
+            --section-title-width: 220px;   /* controls how far right the text column starts */
+            --section-gap: 4rem;            /* space between title column and text column */
         }
         
         body {
@@ -43,14 +46,14 @@
         }
         
         .nav-container {
-            max-width: 1000px;   /* SAME as .container */
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 2rem;     /* same side padding as sections */
+            padding: 0;               /* IMPORTANT: no extra padding here */
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .nav-left {
             display: flex;
             align-items: center;
@@ -94,7 +97,7 @@
         
         /* Sections */
         section {
-            padding: 100px 2rem;
+            padding: 100px 0;   /* horizontal padding now comes from .container */
             min-height: 100vh;
         }
         
@@ -105,6 +108,7 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
+            padding: 0 var(--page-pad);
         }
         
         /* Home Section */
@@ -190,19 +194,20 @@
         
         /* Research & Teaching Layout */
         .section-content-wrapper {
-            display: flex;
-            gap: 4rem;
-            align-items: flex-start;
+            display: grid;
+            grid-template-columns: var(--section-title-width) 1fr; /* fixed title column */
+            column-gap: var(--section-gap);
+            align-items: start;
         }
         
         .section-title {
             font-size: 2rem;
             color: var(--text-primary);
-            flex-shrink: 0;
+            margin: 0; /* avoid default h2 margins interfering */
         }
         
         .section-main-content {
-            flex: 1;
+            min-width: 0; /* prevents overflow in grid layouts */
         }
         
         /* Research & Teaching Sections */
@@ -317,7 +322,7 @@
 <body>
     <!-- Navigation Menu -->
     <nav>
-        <div class="nav-container">
+        <div class="container nav-container">
             <div class="nav-left">
                 <img src="images/eui3.png" alt="University Logo" class="university-logo">
                 <a href="#home" class="site-title">Raffael Kind</a>
