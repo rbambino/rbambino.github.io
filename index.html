@@ -192,7 +192,7 @@
             margin-top: 0;
         }
         
-        /* Research & Teaching Layout */
+        /* Research Layout */
         .section-content-wrapper {
             display: grid;
             grid-template-columns: var(--section-title-width) 1fr; /* fixed title column */
@@ -210,9 +210,8 @@
             min-width: 0; /* prevents overflow in grid layouts */
         }
         
-        /* Research & Teaching Sections */
-        .research-content,
-        .teaching-content {
+        /* Research Sections */
+        .research-content {
             margin-left: 2rem;
         }
         
@@ -249,6 +248,34 @@
         .paper-links a:hover {
             color: var(--link-hover);
             text-decoration: underline;
+        }
+
+        /* Research Sections */
+        .teaching-content {
+            margin-left: 2rem;
+        }
+        
+        .course-item {
+            margin-bottom: 2rem;
+        }
+        
+        .course-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .course-description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .course-year {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         /* Contact layout */
