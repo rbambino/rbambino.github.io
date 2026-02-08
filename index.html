@@ -183,7 +183,7 @@
             color: var(--text-primary);
         }
         
-        /* Research & Teaching Sections */
+        /* Research Sections */
         .paper-item {
             margin-bottom: 2rem;
         }
@@ -206,6 +206,12 @@
             font-size: 0.95rem;
             line-height: 1.6;
         }
+
+        .paper-presentations {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
         
         .paper-links a {
             color: var(--link-color);
@@ -217,6 +223,30 @@
         .paper-links a:hover {
             color: var(--link-hover);
             text-decoration: underline;
+        }
+
+        /* Teaching Sections */
+        .course-item {
+            margin-bottom: 2rem;
+        }
+        
+        .course-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .course-description {
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-year {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
         }
         
         /* Contact Section */
@@ -331,7 +361,7 @@ I work under the supervision of <a href="https://alexandermonge.com/about-me/" t
             <div class="paper-item">
                 <div class="paper-title">Labor-Market Adjustment to Policy-Directed Firm Closures: Evidence from East Germany</div>
                 <div class="paper-authors"><i>Joint project with <a href="https://robertschall.eu/" target="_blank">Robert Schall</a> & David Wittekopf</i></div>
-                <div class="paper-authors" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): IAB 17th Interdisciplinary PhD-Workshop – Perspectives On (Un-)Employment 2026 (Nürnberg)*; Seminar in Empirical Microeconomics 2026 (Konstanz); PEARL – Florence Political Economy Applied Research Lab 2026 (Florence); 15th Annual Meeting of the Armenian Economic Association 2025 (Yerevan)*; 5th EUI Alumni Conference in Economics 2025 (Florence); EuroCIM – European Causal Inference Meeting 2025 (Ghent)</div>
+                <div class="paper-presentations" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): IAB 17th Interdisciplinary PhD-Workshop – Perspectives On (Un-)Employment 2026 (Nürnberg)*; Seminar in Empirical Microeconomics 2026 (Konstanz); PEARL – Florence Political Economy Applied Research Lab 2026 (Florence); 15th Annual Meeting of the Armenian Economic Association 2025 (Yerevan)*; 5th EUI Alumni Conference in Economics 2025 (Florence); EuroCIM – European Causal Inference Meeting 2025 (Ghent)</div>
                 <div class="paper-abstract">
                     Paper: Available upon request.
                 </div>
@@ -348,7 +378,7 @@ I work under the supervision of <a href="https://alexandermonge.com/about-me/" t
             <div class="paper-item">
                 <div class="paper-title">Beyond Social Mobility – The Class Pay Gap</div>
                 <div class="paper-authors"><i>Joint project with Simon Handreke & David Wittekopf</i></div>
-                <div class="paper-authors" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): Bocconi-EIEF-World Bank Workshop: Mend the Gap in Economic Opportunities in Europe and Central Asia 2025 (Rome)*; 15th Annual Meeting of the Armenian Economic Association 2025 (Yerevan); EuroCIM – European Causal Inference Meeting 2025 (Ghent)*; 3rd Essex PhD Conference in Applied Economics 2025 (Colchester); EUI Microeconometrics Working Group 2024 (Florence)</div>
+                <div class="paper-presentations" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): Bocconi-EIEF-World Bank Workshop: Mend the Gap in Economic Opportunities in Europe and Central Asia 2025 (Rome)*; 15th Annual Meeting of the Armenian Economic Association 2025 (Yerevan); EuroCIM – European Causal Inference Meeting 2025 (Ghent)*; 3rd Essex PhD Conference in Applied Economics 2025 (Colchester); EUI Microeconometrics Working Group 2024 (Florence)</div>
                 <div class="paper-abstract">
                     Paper: Available upon request.
                 </div>
@@ -369,25 +399,35 @@ I work under the supervision of <a href="https://alexandermonge.com/about-me/" t
             
             <h3>European University Institute</h3>
             
-            <div class="paper-item">
-                <div class="paper-title">Course Name 1</div>
-                <div class="paper-abstract">
-                    Course description goes here...
+            <div class="course-item">
+                <div class="course-title">Statistics and Econometrics II</div>
+                <div class="course-description">
+                    Ph.D. Course -- Teaching assistant to <a href="https://sites.google.com/unifi.it/fabriziamealli" target="_blank">Fabrizia Mealli</a>
                 </div>
-                <div class="paper-abstract">
-                    Course description goes here...
+                <div class="course-year">
+                    Winter 2024-2025, Winter 2025-2026
                 </div>
             </div>
             
             <h3>University of Konstanz</h3>
             
-            <div class="paper-item">
-                <div class="paper-title">Course Name 2</div>
-                <div class="paper-abstract">
-                    Course description goes here...
+            <div class="course-item">
+                <div class="course-title">Microeconomics I</div>
+                <div class="course-description">
+                    Undergraduate Course -- Teaching assistant to <a href="https://www.dertwinkel.com/" target="_blank">Markus Dertwinkel-Kalt</a>
                 </div>
-                <div class="paper-abstract">
-                    Course description goes here...
+                <div class="course-year">
+                    Summer 2021
+                </div>
+            </div>
+
+            <div class="course-item">
+                <div class="course-title">Introduction to Economics</div>
+                <div class="course-description">
+                    Undergraduate Course -- Teaching assistant to <a href="Almuth Scholl" target="_blank">https://www.wiwi.uni-konstanz.de/scholl/team/prof-dr-almuth-scholl/</a>, <a href="Sebastian Findeisen" target="_blank">https://sebastian-findeisen.com/</a> and <a href="Guido Schwerdt" target="_blank">https://www.wiwi.uni-konstanz.de/schwerdt/personen/prof-dr-guido-schwerdt/</a>
+                </div>
+                <div class="course-year">
+                    Winter 2019-2020, Winter 2020-2021, Winter 2021-2022
                 </div>
             </div>
         </div>
