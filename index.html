@@ -342,6 +342,68 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Mobile / small screens */
+        @media (max-width: 768px) {
+            /* Sections: less padding */
+            section {
+                padding: 90px 0;
+            }
+        
+            /* Home: stack photo above text */
+            .home-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.75rem;
+            }
+        
+            .profile-section {
+                text-align: center;
+            }
+        
+            .intro-text {
+                width: 100%;
+                font-size: 1.05rem; /* optional: slightly larger on mobile */
+            }
+        
+            /* Research/Teaching/Contact: stack title above content */
+            .section-content-wrapper {
+                grid-template-columns: 1fr;
+                row-gap: 1.25rem;
+            }
+        
+            /* Remove “fixed title column” feel on mobile */
+            .section-title {
+                margin-bottom: 0;
+            }
+        
+            /* Optional: reduce heading sizes a bit */
+            h2, .section-title {
+                font-size: 1.6rem;
+            }
+        
+            h3 {
+                font-size: 1.25rem;
+            }
+        
+            /* Contact: stack left/right blocks */
+            .contact-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        
+            /* Nav: allow wrapping so it doesn't overflow */
+            .nav-container {
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+        
+            nav ul {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+
     </style>
 </head>
 <body>
