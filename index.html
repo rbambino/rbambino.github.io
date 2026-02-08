@@ -119,8 +119,8 @@
         }
         
         .profile-picture {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
@@ -183,7 +183,29 @@
             color: var(--text-primary);
         }
         
-        /* Research Sections */
+        /* Research & Teaching Layout */
+        .section-content-wrapper {
+            display: flex;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-primary);
+            flex-shrink: 0;
+        }
+        
+        .section-main-content {
+            flex: 1;
+        }
+        
+        /* Research & Teaching Sections */
+        .research-content,
+        .teaching-content {
+            margin-left: 2rem;
+        }
+        
         .paper-item {
             margin-bottom: 2rem;
         }
@@ -196,19 +218,13 @@
         }
         
         .paper-authors {
-            color: var(--text-primary);
+            color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 0.5rem;
         }
         
         .paper-abstract {
             color: var(--text-primary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .paper-presentations {
-            color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.6;
         }
@@ -224,68 +240,62 @@
             color: var(--link-hover);
             text-decoration: underline;
         }
-
-        /* Teaching Sections */
-        .course-item {
-            margin-bottom: 2rem;
-        }
-        
-        .course-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.3rem;
-        }
-        
-        .course-description {
-            color: var(--text-primary);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .course-year {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
         
         /* Contact Section */
         .contact-content {
             display: flex;
-            gap: 3rem;
+            gap: 4rem;
             align-items: flex-start;
         }
         
         .contact-title {
             font-size: 2rem;
             color: var(--text-primary);
+            flex-shrink: 0;
         }
         
         .contact-info {
             flex: 1;
+            display: flex;
+            gap: 4rem;
+            justify-content: space-between;
+        }
+        
+        .contact-left {
+            flex: 1;
+        }
+        
+        .contact-right {
+            flex: 1;
         }
         
         .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
             margin-bottom: 1.5rem;
         }
         
         .contact-item img {
-            width: 24px;
-            height: 24px;
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+        }
+        
+        .contact-item-text {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+        
+        .contact-item-text p {
+            margin-bottom: 0.3rem;
         }
         
         .contact-item a {
-            color: var(--link-color);
+            color: var(--text-primary);
             text-decoration: none;
             transition: color 0.3s;
         }
         
         .contact-item a:hover {
             color: var(--link-hover);
-            text-decoration: underline;
         }
         
         /* Links */
@@ -326,7 +336,7 @@
         <div class="container">
             <div class="home-content">
                 <div class="profile-section">
-                    <img src="images/profile_picture.jpg" alt="Your Name" class="profile-picture">
+                    <img src="images/profile_picture.jpg" alt="Raffael Kind" class="profile-picture">
                     <div class="profile-name">Raffael Kind</div>
                     <div class="profile-title">PhD Candidate in Economics</div>
                     <div class="social-icons">
@@ -343,51 +353,53 @@
                 </div>
                 <div class="intro-text">
                     <p>Welcome to my website!</p>
-                    <p>I am a Ph.D. candidate in Economics at the <a href="https://www.eui.eu/en/academic-units/department-of-economics" target="_blank">European University Institute</a> in Florence, Italy. My research focuses on labor economics, intergenerational social mobility and inequality, and political economy. I combine applied microeconometric techniques to identify causal relationships with theoretical macroeconomic modeling to deepen the understanding of the mechanisms underlying my empirical findings.
-I work under the supervision of <a href="https://alexandermonge.com/about-me/" target="_blank">Alexander Monge-Naranjo</a> and <a href="https://sites.google.com/unifi.it/fabriziamealli" target="_blank">Fabrizia Mealli</a>. Prior to my doctoral studies, I completed a Master’s degree in Economics at the University of Konstanz, Germany. </p>
-                    <p></p>
+                    <p>I am a Ph.D. candidate in Economics at the <a href="https://www.eui.eu/en/academic-units/department-of-economics" target="_blank">European University Institute</a> in Florence, Italy. My research focuses on labor economics, intergenerational social mobility and inequality, and political economy. I combine applied microeconometric techniques to identify causal relationships with theoretical macroeconomic modeling to deepen the understanding of the mechanisms underlying my empirical findings.</p>
+                    <p>I work under the supervision of <a href="https://alexandermonge.com/about-me/" target="_blank">Alexander Monge-Naranjo</a> and <a href="https://sites.google.com/unifi.it/fabriziamealli" target="_blank">Fabrizia Mealli</a>. Prior to my doctoral studies, I completed a Master's degree in Economics at the University of Konstanz, Germany.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Research Section -->
     <section id="research">
         <div class="container">
-            <h2>Research</h2>
-            
-            <h3>Working Papers</h3>
-            
-            <div class="paper-item">
-                <div class="paper-title">Labor-Market Adjustment to Policy-Directed Firm Closures: Evidence from East Germany</div>
-                <div class="paper-authors"><i>Joint project with <a href="https://robertschall.eu/" target="_blank">Robert Schall</a> & David Wittekopf</i></div>
-                <div class="paper-presentations" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): IAB 17th Interdisciplinary PhD-Workshop – Perspectives On (Un-)Employment 2026 (Nürnberg)*; Seminar in Empirical Microeconomics 2026 (Konstanz); PEARL – Florence Political Economy Applied Research Lab 2026 (Florence); 15th Annual Meeting of the Armenian Economic Association 2025 (Yerevan)*; 5th EUI Alumni Conference in Economics 2025 (Florence); EuroCIM – European Causal Inference Meeting 2025 (Ghent)</div>
-                <div class="paper-abstract">
-                    Paper: Available upon request.
+            <div class="section-content-wrapper">
+                <h2 class="section-title">Research</h2>
+                <div class="section-main-content">
+                    <h3>Working Papers</h3>
+                    
+                    <div class="paper-item">
+                        <div class="paper-title">Labor-Market Adjustment to Policy-Directed Firm Closures: Evidence from East Germany</div>
+                        <div class="paper-authors"><i>Joint project with <a href="https://robertschall.eu/" target="_blank">Robert Schall</a> & David Wittekopf</i></div>
+                        <div class="paper-presentations" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): IAB 17th Interdisciplinary PhD-Workshop – Perspectives On (Un-)Employment 2026 (Nürnberg)*; Seminar in Empirical Microeconomics 2026 (Konstanz); PEARL – Florence Political Economy Applied Research Lab 2026 (Florence); 15th Annual Meeting of the Armenian Economic Association 2025 (Yerevan)*; 5th EUI Alumni Conference in Economics 2025 (Florence); EuroCIM – European Causal Inference Meeting 2025 (Ghent)</div>
+                        <div class="paper-abstract">
+                            Paper: Available upon request.
+                        </div>
+                        <!--
+                        <div class="paper-links">
+                            <a href="#">PDF</a>
+                            <a href="#">SSRN</a>
+                        </div>
+                        -->
+                    </div>
+                    
+                    <h3>Work in Progress</h3>
+                    
+                    <div class="paper-item">
+                        <div class="paper-title">Beyond Social Mobility – The Class Pay Gap</div>
+                        <div class="paper-authors"><i>Joint project with Simon Handreke & David Wittekopf</i></div>
+                        <div class="paper-presentations" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): Bocconi-EIEF-World Bank Workshop: Mend the Gap in Economic Opportunities in Europe and Central Asia 2025 (Rome)*; 15th Annual Meeting of the Armenian Economic Association 2025 (Yerevan); EuroCIM – European Causal Inference Meeting 2025 (Ghent)*; 3rd Essex PhD Conference in Applied Economics 2025 (Colchester); EUI Microeconometrics Working Group 2024 (Florence)</div>
+                        <div class="paper-abstract">
+                            Paper: Available upon request.
+                        </div>
+                        <!--
+                        <div class="paper-links">
+                            <a href="#">PDF</a>
+                            <a href="#">SSRN</a>
+                        </div>
+                        -->
+                    </div>
                 </div>
-                <!--
-                <div class="paper-links">
-                    <a href="#">PDF</a>
-                    <a href="#">SSRN</a>
-                </div>
-                -->
-            </div>
-            
-            <h3>Work in Progress</h3>
-            
-            <div class="paper-item">
-                <div class="paper-title">Beyond Social Mobility – The Class Pay Gap</div>
-                <div class="paper-authors"><i>Joint project with Simon Handreke & David Wittekopf</i></div>
-                <div class="paper-presentations" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): Bocconi-EIEF-World Bank Workshop: Mend the Gap in Economic Opportunities in Europe and Central Asia 2025 (Rome)*; 15th Annual Meeting of the Armenian Economic Association 2025 (Yerevan); EuroCIM – European Causal Inference Meeting 2025 (Ghent)*; 3rd Essex PhD Conference in Applied Economics 2025 (Colchester); EUI Microeconometrics Working Group 2024 (Florence)</div>
-                <div class="paper-abstract">
-                    Paper: Available upon request.
-                </div>
-                <!--
-                <div class="paper-links">
-                    <a href="#">PDF</a>
-                    <a href="#">SSRN</a>
-                </div>
-                -->
             </div>
         </div>
     </section>
@@ -395,39 +407,42 @@ I work under the supervision of <a href="https://alexandermonge.com/about-me/" t
     <!-- Teaching Section -->
     <section id="teaching">
         <div class="container">
-            <h2>Teaching</h2>
-            
-            <h3>European University Institute</h3>
-            
-            <div class="course-item">
-                <div class="course-title">Statistics and Econometrics II</div>
-                <div class="course-description">
-                    Ph.D. Course -- Teaching assistant to <a href="https://sites.google.com/unifi.it/fabriziamealli" target="_blank">Fabrizia Mealli</a>
-                </div>
-                <div class="course-year">
-                    Winter 2025-2026, Winter 2024-2025
-                </div>
-            </div>
-            
-            <h3>University of Konstanz</h3>
-            
-            <div class="course-item">
-                <div class="course-title">Introduction to Economics</div>
-                <div class="course-description">
-                    Undergraduate Course -- Teaching assistant to <a href="https://www.wiwi.uni-konstanz.de/scholl/team/prof-dr-almuth-scholl/" target="_blank">Almuth Scholl</a>, <a href="https://sebastian-findeisen.com/" target="_blank">Sebastian Findeisen</a> and <a href="https://www.wiwi.uni-konstanz.de/schwerdt/personen/prof-dr-guido-schwerdt/" target="_blank">Guido Schwerdt</a>
-                </div>
-                <div class="course-year">
-                    Winter 2021-2022, Winter 2020-2021, Winter 2019-2020
-                </div>
-            </div>
-            
-            <div class="course-item">
-                <div class="course-title">Microeconomics I</div>
-                <div class="course-description">
-                    Undergraduate Course -- Teaching assistant to <a href="https://www.dertwinkel.com/" target="_blank">Markus Dertwinkel-Kalt</a>
-                </div>
-                <div class="course-year">
-                    Summer 2021
+            <div class="section-content-wrapper">
+                <h2 class="section-title">Teaching</h2>
+                <div class="section-main-content">
+                    <h3>European University Institute</h3>
+                    
+                    <div class="course-item">
+                        <div class="course-title">Statistics and Econometrics II</div>
+                        <div class="course-description">
+                            Ph.D. Course -- Teaching assistant to <a href="https://sites.google.com/unifi.it/fabriziamealli" target="_blank">Fabrizia Mealli</a>
+                        </div>
+                        <div class="course-year">
+                            Winter 2025-2026, Winter 2024-2025
+                        </div>
+                    </div>
+                    
+                    <h3>University of Konstanz</h3>
+                    
+                    <div class="course-item">
+                        <div class="course-title">Introduction to Economics</div>
+                        <div class="course-description">
+                            Undergraduate Course -- Teaching assistant to <a href="https://www.wiwi.uni-konstanz.de/scholl/team/prof-dr-almuth-scholl/" target="_blank">Almuth Scholl</a>, <a href="https://sebastian-findeisen.com/" target="_blank">Sebastian Findeisen</a> and <a href="https://www.wiwi.uni-konstanz.de/schwerdt/personen/prof-dr-guido-schwerdt/" target="_blank">Guido Schwerdt</a>
+                        </div>
+                        <div class="course-year">
+                            Winter 2021-2022, Winter 2020-2021, Winter 2019-2020
+                        </div>
+                    </div>
+                    
+                    <div class="course-item">
+                        <div class="course-title">Microeconomics I</div>
+                        <div class="course-description">
+                            Undergraduate Course -- Teaching assistant to <a href="https://www.dertwinkel.com/" target="_blank">Markus Dertwinkel-Kalt</a>
+                        </div>
+                        <div class="course-year">
+                            Summer 2021
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
