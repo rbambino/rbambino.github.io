@@ -41,12 +41,12 @@
         
         :root {
             /* Light mode color palette */
-            --bg-primary: #f5f5f7;   /* #f6f3ee */           
-            --bg-secondary: #e8e8eb; /* #ebe7df */    
+            --bg-primary: #f8f5ef;   /* #f6f3ee; f5f5f7 */           
+            --bg-secondary: #ededee; /* #ebe7df; e8e8eb */    
             --text-primary: #1f2a38;         
             --text-secondary: #4a5868;       
-            --link-color: #7da3cc;
-            --link-hover: #5f8fbe;
+            --link-color: #4d75a0; /* #7da3cc */
+            --link-hover: #345b85; /* #5f8fbe */
             --page-pad: 0rem;                
             --section-title-width: 220px;    
             --section-gap: 4rem;             
@@ -132,9 +132,9 @@
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 var(--page-pad);
+            padding: 1.5rem var(--page-pad);
         }
         
         /* Home Section */
@@ -150,10 +150,12 @@
         }
         
         .profile-picture {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
+            width: 270px;
+            aspect-ratio: 3 / 4;
+            height: auto;
+            border-radius: 12px;
             object-fit: cover;
+            object-position: center top;   /* keeps the face in frame when cropping */
             margin-bottom: 1rem;
             border: 3px solid var(--link-color);
         }
@@ -200,6 +202,8 @@
         .intro-text p {
             margin-bottom: 1rem;
             line-height: 1.8;
+            text-align: justify;
+            hyphens: auto;
         }
         
         /* Section Headers */
@@ -510,7 +514,7 @@
                     <div style="margin-left: 1rem;">
                         <div class="paper-item">
                             <div class="paper-title">Intergenerational Earnings Persistence and the Class Pay Gap Within Elite Occupations </div>
-                            <div class="paper-authors"><i>Joint project with Simon Handreke & David Wittekopf</i></div>
+                            <div class="paper-authors"><i>Joint project with Simon Handreke & <a href="https://davidwittekopf.com/" target="_blank">David Wittekopf</a></i></div>
                             <div class="paper-presentations" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): NASMES 2026 Conference (Atlanta, scheduled); 3rd Workshop on Wealth Inequality, Economic Mobility and Labor Markets 2026 (Vienna); 9<sup>th</sup> Linked Employer-Employee Data Workshop 2026 (Lisbon)*; Bocconi-EIEF-World Bank Workshop: Mend the Gap in Economic Opportunities in Europe and Central Asia 2025 (Rome)*; 15<sup>th</sup> Annual Meeting of the Armenian Economic Association 2025 (Yerevan); European Causal Inference Meeting 2025 (Ghent)*; 3<sup>rd</sup> Essex PhD Conference in Applied Economics 2025 (Colchester); EUI Microeconometrics Working Group 2024 (Florence)</div>
                             <div class="paper-abstract">
                                 Paper: Available upon request.
@@ -526,7 +530,7 @@
                         <!--
                         <div class="paper-item">
                             <div class="paper-title">The Gender-Class Pay Gap <a style="font-size: 0.75rem;" href="https://www.eui.eu/news-hub?id=raffael-kind-unpacks-how-family-background-affects-work-income&lang=en-GB" target="_blank">[EUI Research News]</a></div>
-                            <div class="paper-authors"><i>Joint project with David Wittekopf</i></div>
+                            <div class="paper-authors"><i>Joint project with <a href="https://davidwittekopf.com/" target="_blank">David Wittekopf</a></i></div>
                             <div class="paper-presentations" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): Bocconi-EIEF-World Bank Workshop: Mend the Gap in Economic Opportunities in Europe and Central Asia 2025 (Rome)*; 15<sup>th</sup> Annual Meeting of the Armenian Economic Association 2025 (Yerevan); European Causal Inference Meeting 2025 (Ghent)*; 3<sup>rd</sup> Essex PhD Conference in Applied Economics 2025 (Colchester); EUI Microeconometrics Working Group 2024 (Florence)</div>
                             <div class="paper-abstract">
                                 Paper: Available upon request.
@@ -540,7 +544,7 @@
                     
                         <div class="paper-item">
                             <div class="paper-title">Wind of Structural Change – Social Status after the Economic Transformation of East Germany</div>
-                            <div class="paper-authors"><i>Joint project with <a href="https://robertschall.eu/" target="_blank">Robert Schall</a> & David Wittekopf</i></div>
+                            <div class="paper-authors"><i>Joint project with <a href="https://robertschall.eu/" target="_blank">Robert Schall</a> & <a href="https://davidwittekopf.com/" target="_blank">David Wittekopf</a></i></div>
                             <div class="paper-presentations" style="font-size: 0.75rem;">Presented at (* if presented by coauthor): IAB 17<sup>th</sup> Interdisciplinary PhD-Workshop – Perspectives On (Un-)Employment 2026 (Nürnberg)*; Seminar in Empirical Microeconomics 2026 (Konstanz); 15<sup>th</sup> Annual Meeting of the Armenian Economic Association 2025 (Yerevan)*; 5<sup>th</sup> EUI Alumni Conference in Economics 2025 (Florence)</div>
                             <div class="paper-abstract">
                                 Paper: Available upon request.
