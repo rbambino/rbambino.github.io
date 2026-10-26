@@ -362,6 +362,13 @@
             font-size: 0.95rem;
             line-height: 1.6;
         }
+
+        /* Quotes */
+        .eval-quote { margin: 0; padding: 0.8rem 0; border-top: 1px solid #e2e8f0; }
+        .eval-quote:last-of-type { border-bottom: 1px solid #e2e8f0; }
+        .eval-quote p { margin: 0; font-style: italic; color: #475569; line-height: 1.6; }
+        .eval-quote p::before { content: "\201C"; }
+        .eval-quote p::after { content: "\201D"; }
         
         /* Contact layout */
         .contact-info {
@@ -649,19 +656,27 @@
                                 <p>Teaching assistant to <a href="https://sites.google.com/unifi.it/fabriziamealli" target="_blank">Fabrizia Mealli</a><p>
                                 <p>Ph.D. Course<p>
                             </div>
-                            <details class="abstract-toggle">
-                                <summary>Teaching Evaluation</summary>
-                                <div class="abstract-text">
-                                    <p><em>''Raffael is the best TA we have had so far. He sets the standard for what a teaching assistant should be: clear, exam-oriented, and consistently available. His slides are amazing. 10/10´´</em></p>
-                                    <p><em>''Raffael was a great TA. He managed to break down difficult things and made them look a lot easier.´´</em><p>
-                                    <p><em>''Raffael was super clear, always available for clarifications, and his lectures were very well structured. He puts the accent on the relevant stuff. Very good job.´´</em><p>
-                                    <p><em>''Raffeal is exactly how I want my TAs to be, therefore the best I have ever had.´´</em></p>
-                                    <li><a href="teaching_eval.pdf?v=2" target="_blank">View full evaluation</a></li>
-                                </div>
-                            </details>
                             <div class="course-year">
                                 Winter 2025-2026, Winter 2024-2025
                             </div>
+                            <details class="abstract-toggle">
+                                <summary>Teaching Evaluation</summary>
+                                <div class="abstract-text">
+                                    <blockquote class="eval-quote">
+                                        <p>Raffael is the best TA we have had so far. He sets the standard for what a teaching assistant should be: clear, exam-oriented, and consistently available. His slides are amazing. 10/10</p>
+                                    </blockquote>
+                                    <blockquote class="eval-quote">
+                                        <p>Raffael was a great TA. He managed to break down difficult things and made them look a lot easier.</p>
+                                    </blockquote>
+                                    <blockquote class="eval-quote">
+                                        <p>Raffael was super clear, always available for clarifications, and his lectures were very well structured. He puts the accent on the relevant stuff. Very good job.</p>
+                                    </blockquote>
+                                    <blockquote class="eval-quote">
+                                        <p>Raffael is exactly how I want my TAs to be, therefore the best I have ever had.</p>
+                                    </blockquote>
+                                    <p><a href="teaching_eval.pdf?v=2" target="_blank">View full evaluation</a></p>
+                                </div>
+                            </details>
                         </div>
                     </div>
                     
