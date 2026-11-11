@@ -22,22 +22,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        /*
-        :root {
-            /* Dark mode color palette
-            --bg-primary: #3a3f4b;
-            --bg-secondary: #2a2e38;
-            --text-primary: #ece8e1;
-            --text-secondary: #a8a095;
-            --link-color: #7da3cc;
-            --link-hover: #9fc3e8;
-            --page-pad: 0rem;                
-            --section-title-width: 220px;    
-            --section-gap: 4rem;             
-        }
-        */
-            
+        }   
         
         :root {
             /* Light mode color palette */
@@ -437,9 +422,33 @@
 
         /* Mobile / small screens */
         @media (max-width: 768px) {
-            /* Sections: less padding */
+            :root {
+                --page-pad: 1.25rem;          /* side margins on phones */
+            }
+        
+            /* Nav takes up its own space instead of floating over the content */
+            nav {
+                position: sticky;
+                top: 0;
+                padding: 0.75rem 0;
+            }
+        
+            .nav-container {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem 0.75rem;
+            }
+        
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.9rem 1.2rem;
+            }
+        
+            /* Sections */
             section {
-                padding: 90px 0;
+                padding: 40px 0;
+                scroll-margin-top: 110px;     /* anchor links don't hide under the nav */
             }
         
             /* Home: stack photo above text */
@@ -455,7 +464,7 @@
         
             .intro-text {
                 width: 100%;
-                font-size: 1.05rem; /* optional: slightly larger on mobile */
+                font-size: 1.05rem;
             }
         
             /* Research/Teaching/Contact: stack title above content */
@@ -464,12 +473,10 @@
                 row-gap: 1.25rem;
             }
         
-            /* Remove “fixed title column” feel on mobile */
             .section-title {
                 margin-bottom: 0;
             }
         
-            /* Optional: reduce heading sizes a bit */
             h2, .section-title {
                 font-size: 1.6rem;
             }
@@ -482,17 +489,6 @@
             .contact-info {
                 flex-direction: column;
                 gap: 1.5rem;
-            }
-        
-            /* Nav: allow wrapping so it doesn't overflow */
-            .nav-container {
-                flex-wrap: wrap;
-                gap: 0.75rem;
-            }
-        
-            nav ul {
-                flex-wrap: wrap;
-                gap: 1rem;
             }
         }
 
