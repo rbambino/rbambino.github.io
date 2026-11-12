@@ -180,30 +180,18 @@
             height: 32px;
         }
 
-            /* Research interests under the photo */
+            /* Research interests under the photo & intro text */
         .research-interests {
-            margin-top: 1.75rem;
-            width: 270px;               /* same width as the photo */
-            text-align: left;           /* profile-section is centered, the list should not be */
-        }
-        
-        .interests-title {
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.4rem;
-        }
-        
-        .research-interests ul {
-            list-style: disc;
-            padding-left: 1.2rem;       /* needed because your * reset removes all padding */
-        }
-        
-        .research-interests li {
-            font-size: 0.9rem;
-            line-height: 1.5;
+            margin-top: 2.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--line-color);
+            font-size: 1rem;
             color: var(--text-secondary);
-            margin-bottom: 0.2rem;
+        }
+        
+        .research-interests strong {
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
             /* Intro text */
@@ -575,6 +563,7 @@
                     <p>Before joining the EUI, I completed a Master's degree in Economics at the <a href="https://www.wiwi.uni-konstanz.de/en/" target="_blank">University of Konstanz</a>, Germany, with a specialization in macroeconomics.</p>
                 </div>
             </div>
+            <p class="research-interests"><strong>Research interests:</strong> Labor economics, intergenerational mobility and inequality, political economy</p>
         </div>
     </section>
 
